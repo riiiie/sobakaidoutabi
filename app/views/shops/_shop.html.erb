@@ -3,9 +3,7 @@
     <div class="card">
       <div class="card-body">
         <h4 class="card-title">
-          <a href="#">
-            <%= shop.name %>
-          </a>
+          <%= link_to shop.name, shop_path(shop) %>
         </h4>
         <div class='mr10 float-right'>
           <a href="#"><i class="fa-solid fa-trash"></i></a>

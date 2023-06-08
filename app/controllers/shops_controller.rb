@@ -23,7 +23,7 @@ class ShopsController < ApplicationController
     end
   end
 
-  # /shops/:id => shop_path
+  # /shops/:id => shop_path(:id)
   def show
   end
 
@@ -31,7 +31,7 @@ class ShopsController < ApplicationController
   def edit
   end
 
-  # /shops/:id => shop_path
+  # /shops/:id => shop_path(:id)
   def update
   end
 
