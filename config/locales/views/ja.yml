@@ -1,0 +1,15 @@
+ja:
+  defaults:
+    login: 'ログイン'
+    sign_up: 'サインアップ'
+    logout: 'ログアウト'
+    register: '登録'
+  users:
+    new:
+      title: 'ユーザー登録'
+      login_page: 'ログインページ'
+  user_sessions:
+    new:
+      title: 'ログイン'
+      register_page: '登録ページはこちら'
+      password_forget: 'パスワードをお忘れの方はこちら'

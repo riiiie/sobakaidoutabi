@@ -73,3 +73,4 @@ end
 
 # 自分で追加
 gem "sorcery"
+gem 'rails-i18n'

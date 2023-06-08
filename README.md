@@ -80,8 +80,8 @@ https://drive.google.com/file/d/1gxwbgaWRU83uq8eIOt7blyyDOL6ccIE7/view?usp=shari
 
 ■コマンド
 - postgresql@15
-brew services start postgresql
-brew services stop postgresql
+brew services start postgresql@15
+brew services stop postgresql@15
 
 - マイグレーション
 rails db:migrate RAILS_ENV=test
