@@ -8,19 +8,19 @@
           </a>
         </h4>
         <div class='mr10 float-right'>
-          <a href="#"><%= icon 'fas', 'trash', class: 'pr-1' %></a>
-          <a href="#"><%= icon 'fa', 'pen' %></a>
+          <a href="#"><i class="fa-solid fa-trash"></i></a>
+          <a href="#"><i class="fa-solid fa-pen"></i></a>
         </div>
         <ul class="list-inline">
           <li class="list-inline-item">
-            <%= icon 'far', 'user' %>
+            <i class="fa-solid fa-user"></i>
           </li>
           <li class="list-inline-item">
-            <%= icon 'far', 'calendar' %>
+            <i class="fa-solid fa-user"></i>
             <%= l shop.created_at, format: :long %>
           </li>
         </ul>
-        <p class="card-text"><%= board.body %></p>
+        <p class="card-text"><%= shop.address %></p>
       </div>
     </div>
   </div>
