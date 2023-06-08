@@ -1,0 +1,27 @@
+<div class="col-sm-12 col-lg-4 mb-3">
+  <div id="shop-id-<%= shop.id %>">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">
+          <a href="#">
+            <%= shop.name %>
+          </a>
+        </h4>
+        <div class='mr10 float-right'>
+          <a href="#"><%= icon 'fas', 'trash', class: 'pr-1' %></a>
+          <a href="#"><%= icon 'fa', 'pen' %></a>
+        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <%= icon 'far', 'user' %>
+          </li>
+          <li class="list-inline-item">
+            <%= icon 'far', 'calendar' %>
+            <%= l shop.created_at, format: :long %>
+          </li>
+        </ul>
+        <p class="card-text"><%= board.body %></p>
+      </div>
+    </div>
+  </div>
+</div>
