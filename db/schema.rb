@@ -15,12 +15,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_08_103933) do
   enable_extension "plpgsql"
 
   create_table "shops", force: :cascade do |t|
-    t.string "name"
-    t.text "address"
-    t.float "latitude"
-    t.float "longitude"
+    t.string "name", null: false
+    t.text "address", null: false
     t.string "holiday"
-    t.integer "closed"
+    t.integer "closed", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
