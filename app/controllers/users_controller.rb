@@ -10,9 +10,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       redirect_to login_path
-      flash[:success] = 'success'
+      flash[:success] = t('.success')
     else
-      flash.now[:danger] = 'fail'
+      flash.now[:danger] = t('.fail')
       render :new, status: :unprocessable_entity
     end
   end
