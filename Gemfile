@@ -67,8 +67,8 @@ group :development do
   # gem "spring"
   
   # 自分で追加
-  gem "rubocop"
-  gem "rubocop-rails"
+  gem "rubocop", require: false
+  gem "rubocop-rails", require: false
 end
 
 # 自分で追加
