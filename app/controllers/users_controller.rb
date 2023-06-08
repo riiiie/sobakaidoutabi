@@ -10,10 +10,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       redirect_to login_path
-      flash[:notice] = 'success'
+      flash[:success] = 'success'
     else
-      flash.now[:alert] = 'fail'
-      render :new
+      flash.now[:danger] = 'fail'
+      render :new, status: :unprocessable_entity
     end
   end
 
