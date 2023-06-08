@@ -65,5 +65,12 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  
+  # 自分で追加
+  gem "rubocop", require: false
+  gem "rubocop-rails", require: false
 end
 
+# 自分で追加
+gem "sorcery"
+gem 'rails-i18n'

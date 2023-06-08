@@ -3,7 +3,8 @@
     <%= link_to "Bootstrap", root_path, class: "navbar-brand" %>
     <div class="collapse navbar-collapse justify-content-end" id="navmenu">
       <div class="navbar-nav">
-        <%= link_to (t'defaults.logout'), logout_path, data: { turbo_method: :delete }, class: "nav-item nav-link active" %>
+        <%= link_to (t'defaults.sign_up'), new_user_path, class: "nav-item nav-link active" %>
+        <%= link_to (t'defaults.login'), login_path, class: "nav-item nav-link active" %>
       </div>
     </div>
   </nav>
