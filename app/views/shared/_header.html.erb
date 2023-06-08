@@ -1,10 +1,9 @@
 <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:#191970;">
-  <a href="#" class="navbar-brand">Bootstrap</a>
+  <%= link_to "Bootstrap", root_path, class: "navbar-brand" %>
   <div class="collapse navbar-collapse justify-content-end" id="navmenu">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">新規作成</a>
-      <a class="nav-item nav-link disabled" href="#">編集</a>
-      <a class="nav-item nav-link disabled" href="#">一覧表示</a>
+      <%= link_to "Sign Up", new_user_path, class: "nav-item nav-link active" %>
+      <%= link_to "Login", login_path, class: "nav-item nav-link active" %>
     </div>
   </div>
 </nav>
