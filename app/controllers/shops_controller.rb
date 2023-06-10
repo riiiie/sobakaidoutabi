@@ -15,7 +15,7 @@ class ShopsController < ApplicationController
   def create
     @shop = Shop.new(shop_params)
     if @shop.save
-      redirect_to shop_path(params[:id])
+      redirect_to shop_path(@shop)
       flash[:success] = "success"
     else
       flash[:danger] = "fail"
