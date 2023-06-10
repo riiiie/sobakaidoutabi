@@ -1,8 +1,11 @@
 <header>
-  <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:#191970;">
+  <nav class="navbar navbar-expand-sm navbar-dark px-4" style="background-color:#191970;">
     <%= link_to "Bootstrap", root_path, class: "navbar-brand" %>
     <div class="collapse navbar-collapse justify-content-end" id="navmenu">
       <div class="navbar-nav">
+        <div style="font-size: 1.5rem; color: white;">
+          <i class="fa-solid fa-right-to-bracket"></i>
+        </div>
         <%= link_to (t'defaults.sign_up'), new_user_path, class: "nav-item nav-link active" %>
         <%= link_to (t'defaults.login'), login_path, class: "nav-item nav-link active" %>
       </div>
