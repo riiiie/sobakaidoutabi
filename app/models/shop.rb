@@ -3,5 +3,5 @@ class Shop < ApplicationRecord
   validates :address, presence: true
   validates :closed, presence: true
 
-  enum closed: { open: 0, confirm: 1, closed: 2 }
+  enum closed: { open: 0, comfirm: 1, closed: 2 }
 end

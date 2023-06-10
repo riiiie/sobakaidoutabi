@@ -15,11 +15,11 @@ class ShopsController < ApplicationController
   def create
     @shop = Shop.new(shop_params)
     if @shop.save
-      redirect_to shop_path
+      redirect_to shops_path
       flash[:success] = "success"
     else
       flash[:danger] = "fail"
-      render :new, status: :unprocessable_entity 
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -33,10 +33,20 @@ class ShopsController < ApplicationController
 
   # /shops/:id => shop_path(:id)
   def update
+    if @shop.update(shop_params)
+      redirect_to shops_path
+      flash[:success] = "success"
+    else
+      flash[:danger] = "fail"
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   # /shops/:id => shop_path
   def destroy
+    @shop.destroy!
+    redirect_to shops_path, status: :see_other 
+    flash[:success] = "success"
   end
 
   private 
