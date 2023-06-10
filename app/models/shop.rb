@@ -1,4 +1,6 @@
 class Shop < ApplicationRecord
+  has_many :records, dependent: :destroy
+
   validates :name, presence: true
   validates :address, presence: true
   validates :closed, presence: true
