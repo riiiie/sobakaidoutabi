@@ -15,7 +15,7 @@ class ShopsController < ApplicationController
   def create
     @shop = Shop.new(shop_params)
     if @shop.save
-      redirect_to shops_path
+      redirect_to shop_path(params[:id])
       flash[:success] = "success"
     else
       flash[:danger] = "fail"
@@ -34,7 +34,7 @@ class ShopsController < ApplicationController
   # /shops/:id => shop_path(:id)
   def update
     if @shop.update(shop_params)
-      redirect_to shops_path
+      redirect_to shop_path(params[:id])
       flash[:success] = "success"
     else
       flash[:danger] = "fail"
