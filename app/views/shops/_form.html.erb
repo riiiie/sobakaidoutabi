@@ -1,0 +1,22 @@
+<%= form_with model: shop, local: true do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :address %>
+    <%= f.text_field :address, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :holiday %>
+    <%= f.text_field :holiday, class: 'form-control' %>
+  </div>
+  <% unless shop.new_record? %>
+    <div class="form-group">
+      <%= f.label :closed %>
+      <%= f.check_box :confirm %>
+    </div>
+  <% end %>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

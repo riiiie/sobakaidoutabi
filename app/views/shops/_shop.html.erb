@@ -6,8 +6,8 @@
           <%= link_to shop.name, shop_path(shop) %>
         </h4>
         <div class='mr10 float-right'>
-          <a href="#"><i class="fa-solid fa-trash"></i></a>
-          <a href="#"><i class="fa-solid fa-pen"></i></a>
+          <%= link_to edit_shop_path(shop) do %><i class="fa-solid fa-pen"></i><% end %>
+          <%= link_to shop_path(shop), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } do %><i class="fa-solid fa-trash"></i><% end %>
         </div>
         <ul class="list-inline">
           <li class="list-inline-item">
