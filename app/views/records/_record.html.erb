@@ -1,0 +1,31 @@
+<tr id="record-<%= record.id %>">
+  <td style="width: 60px">
+    <%= image_tag 'sample.jpg', class: 'rounded-circle', size: '50x50' %>
+  </td>
+  <td>
+    <h3 class="small"><%= record.user.name %></h3>
+    <div id="js-record-<%= record.id %>">
+      <%= simple_format(record.menu_name) %>
+    </div>
+    <div id="js-textarea-record-box-<%= record.id %>" style="display: none;">
+      <textarea id="js-textarea-record-<%= record.id %>" class="form-control mb-1"><%= record.body %></textarea>
+      <button class="btn btn-light js-button-edit-record-cancel" data-record-id="<%= record.id %>">キャンセル</button>
+      <button class="btn btn-success js-button-record-update" data-record-id="<%= record.id %>">更新</button>
+    </div>
+  </td>
+
+  <td class="action">
+    <ul class="list-inline justify-content-center" style="float: right;">
+      <li class="list-inline-item">
+        <a href="#" class='js-edit-record-button' data-record-id="<%= record.id %>">
+          編集
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a href="#" class='js-delete-record-button' data-record-id="<%= record.id %>">
+          削除
+        </a>
+      </li>
+    </ul>
+  </td>
+</tr>

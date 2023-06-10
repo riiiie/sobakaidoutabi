@@ -25,6 +25,8 @@ class ShopsController < ApplicationController
 
   # /shops/:id => shop_path(:id)
   def show
+    @record = Record.new
+    @records = @shop.records.includes(:user).order(created_at: :desc)
   end
 
   # /shops/:id/edit => edit_shop_path
