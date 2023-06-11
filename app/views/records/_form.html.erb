@@ -1,0 +1,44 @@
+<%= form_with(model: [shop, record], local: true) do |f| %>
+  <div class="pt-4">
+    <h5>食べたメニュー</h5>
+    <hr>
+  </div>
+  <div class="form-group">
+    <%= f.label :menu_name %>
+    <%= f.text_field :menu_name, class: 'form-control' %>
+  </div>
+
+
+  <div class="pt-4">
+    <h5>蕎麦</h5>
+    <hr>
+  </div>
+  <div class="form-group">
+    <%= f.label :soba_texture %>
+    <%= f.range_field :soba_texture, class: 'form-range'%>
+  </div>
+  <div class="form-group">
+    <%= f.label :soba_smell %>
+    <%= f.range_field :soba_smell, class: 'form-range'%>
+  </div>
+  <div class="form-group">
+    <%= f.label :soba_aldente %>
+    <%= f.range_field :soba_aldente, class: 'form-range'%>
+  </div>
+
+  
+  <div class="pt-4">
+    <h5>つゆ</h5>
+    <hr>
+  </div>
+  <div class="form-group">
+    <%= f.label :soup_salt %>
+    <%= f.range_field :soup_salt, class: 'form-range'%>
+  </div>
+  <div class="form-group">
+    <%= f.label :soup_salt %>
+    <%= f.range_field :soup_taste, class: 'form-range'%>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

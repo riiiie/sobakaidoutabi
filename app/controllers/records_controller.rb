@@ -3,6 +3,7 @@ class RecordsController < ApplicationController
 
   # /shops/:shop_id/records => new_shop_record_path(@shop)
   def new
+    @shop = Shop.find(params[:shop_id])
     @record = Record.new
   end
 
@@ -51,6 +52,7 @@ class RecordsController < ApplicationController
   end
 
   def set_record
-    @record = Record.find(params[:id])
+    @shop = Shop.find(params[:id])
+    @record = @shop.records.find(params[:id])
   end
 end
