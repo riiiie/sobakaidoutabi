@@ -21,3 +21,15 @@ ja:
       fail: 'ログインに失敗しました'
     destroy:
       success: 'ログアウトしました'
+  records:
+    new:
+      grainy: 'ざらざら'
+      smooth: 'つるつる'
+      gentle: '控えめ'
+      strong: '豊か'
+      soft: 'ふっつり'
+      chewy: 'しっかり'
+      sweet: '甘口'
+      salty: '辛口'
+      light: 'さっぱり'
+      rich: '濃口'

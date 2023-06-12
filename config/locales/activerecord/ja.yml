@@ -2,9 +2,24 @@ ja:
   activerecord:
     models:
       user: 'ユーザー'
+      shop: '店舗'
+      record: '記録'
     attributes:
       user:
         email: 'メールアドレス'
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
         name: 'ニックネーム'
+      shop:
+        name: '店舗名'
+        address: '住所'
+        holiday: '定休日'
+      record:
+        visit_date: '訪問日'
+        kind_of_menu: '冷温'
+        menu_name: 'メニュー名'
+        soba_texture: '食感'
+        soba_smell: '香り'
+        soba_aldente: 'コシ'
+        soup_salt: '辛さ'
+        soup_taste: '濃さ'

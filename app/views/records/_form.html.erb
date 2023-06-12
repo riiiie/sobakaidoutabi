@@ -15,14 +15,26 @@
   </div>
   <div class="form-group">
     <%= f.label :soba_texture %>
+    <div class="row justify-content-between">
+      <div class="col-lg-2 text-start"><%= t'records.new.grainy' %></div>
+      <div class="col-lg-2 text-end"><%= t'records.new.smooth' %></div>
+    </div>
     <%= f.range_field :soba_texture, class: 'form-range'%>
   </div>
   <div class="form-group">
     <%= f.label :soba_smell %>
+    <div class="row justify-content-between">
+      <div class="col-lg-2 text-start"><%= t'records.new.gentle' %></div>
+      <div class="col-lg-2 text-end"><%= t'records.new.strong' %></div>
+    </div>
     <%= f.range_field :soba_smell, class: 'form-range'%>
   </div>
   <div class="form-group">
     <%= f.label :soba_aldente %>
+    <div class="row justify-content-between">
+      <div class="col-lg-2 text-start"><%= t'records.new.soft' %></div>
+      <div class="col-lg-2 text-end"><%= t'records.new.chewy' %></div>
+    </div>
     <%= f.range_field :soba_aldente, class: 'form-range'%>
   </div>
 
@@ -33,10 +45,18 @@
   </div>
   <div class="form-group">
     <%= f.label :soup_salt %>
+    <div class="row justify-content-between">
+      <div class="col-lg-2 text-start"><%= t'records.new.sweet' %></div>
+      <div class="col-lg-2 text-end"><%= t'records.new.salt' %></div>
+    </div>
     <%= f.range_field :soup_salt, class: 'form-range'%>
   </div>
   <div class="form-group">
-    <%= f.label :soup_salt %>
+    <%= f.label :soup_taste %>
+    <div class="row justify-content-between">
+      <div class="col-lg-2 text-start"><%= t'records.new.light' %></div>
+      <div class="col-lg-2 text-end"><%= t'records.new.rich' %></div>
+    </div>
     <%= f.range_field :soup_taste, class: 'form-range'%>
   </div>
 
