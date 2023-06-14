@@ -48,11 +48,11 @@ class RecordsController < ApplicationController
   private
 
   def record_params
-    params.require(:record).permit(:visit_date, :kind_of_menu, :menu_name, :soba_texture, :soba_smell, :soba_aldente, :soup_salt, :soup_taste, :memo)
+    params.require(:record).permit(:visit_date, :kind_of_menu, :menu_name, :soba_texture, :soba_smell, :soba_aldente, :soup_saltiness, :soup_taste, :memo)
   end
 
   def set_record
-    @shop = Shop.find(params[:id])
+    @shop = Shop.find(params[:shop_id])
     @record = @shop.records.find(params[:id])
   end
 end

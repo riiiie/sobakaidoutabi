@@ -21,5 +21,11 @@ ja:
         soba_texture: '食感'
         soba_smell: '香り'
         soba_aldente: 'コシ'
-        soup_salt: '辛さ'
+        soup_saltiness: '辛さ'
         soup_taste: '濃さ'
+  
+  enums:
+    record:
+      kind_of_menu:
+        cool: "冷たい蕎麦"
+        hot: "温かい蕎麦"

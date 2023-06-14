@@ -23,6 +23,8 @@ ja:
       success: 'ログアウトしました'
   records:
     new:
+      cool: "冷たい蕎麦"
+      hot: "温かい蕎麦"
       grainy: 'ざらざら'
       smooth: 'つるつる'
       gentle: '控えめ'

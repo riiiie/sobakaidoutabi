@@ -1,7 +1,26 @@
-<%= form_with(model: [shop, record], local: true) do |f| %>
+<%= form_with(model: [shop, record], url: shop_records_path(params[:shop_id]), local: true) do |f| %>
+  <div class="pt-4">
+    <h5>訪問日</h5>
+    <hr>
+  </div>
+  <div class="form-group">
+    <%= f.label :visit_date %>
+    <%= f.date_field :visit_date, class: 'form-control' %>
+  </div>
+    
   <div class="pt-4">
     <h5>食べたメニュー</h5>
     <hr>
+  </div>
+  <div class="form-group">
+    <%= f.label :kind_of_menu %>
+      <div class="check_box">
+        <%= f.check_box :kind_of_menu, { multiple: false }, "cool", nil %>
+        <%= f.label :menu_cool, t('records.new.cool') %>
+        <span class="px-3"></span>
+        <%= f.check_box :kind_of_menu, { multiple: false }, "hot", nil %>
+        <%= f.label :menu_hot, t('records.new.hot') %>
+      </div>
   </div>
   <div class="form-group">
     <%= f.label :menu_name %>
@@ -44,12 +63,12 @@
     <hr>
   </div>
   <div class="form-group">
-    <%= f.label :soup_salt %>
+    <%= f.label :soup_saltiness %>
     <div class="row justify-content-between">
       <div class="col-lg-2 text-start"><%= t'records.new.sweet' %></div>
-      <div class="col-lg-2 text-end"><%= t'records.new.salt' %></div>
+      <div class="col-lg-2 text-end"><%= t'records.new.salty' %></div>
     </div>
-    <%= f.range_field :soup_salt, class: 'form-range'%>
+    <%= f.range_field :soup_saltiness, class: 'form-range'%>
   </div>
   <div class="form-group">
     <%= f.label :soup_taste %>

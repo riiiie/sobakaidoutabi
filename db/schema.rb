@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_10_154718) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_14_040427) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_10_154718) do
     t.integer "soba_texture", default: 50, null: false
     t.integer "soba_smell", default: 50, null: false
     t.integer "soba_aldente", default: 50, null: false
-    t.integer "soup_salt", default: 50, null: false
+    t.integer "soup_saltiness", default: 50, null: false
     t.integer "soup_taste", default: 50, null: false
     t.text "memo"
     t.datetime "created_at", null: false
