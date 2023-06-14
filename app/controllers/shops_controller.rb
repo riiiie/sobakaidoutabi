@@ -1,4 +1,5 @@
 class ShopsController < ApplicationController
+  skip_before_action :require_login, only: %i[index show]
   before_action :set_shop, only: %i[show edit update destroy]
 
   # /shops => shops_path

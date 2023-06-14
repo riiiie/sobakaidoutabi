@@ -1,4 +1,5 @@
 class RecordsController < ApplicationController
+  skip_before_action :require_login, only: %i[show]
   before_action :set_record, only: %i[show edit update destroy]
 
   # /shops/:shop_id/records => new_shop_record_path(@shop)
