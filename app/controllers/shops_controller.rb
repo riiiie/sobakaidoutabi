@@ -1,4 +1,5 @@
 class ShopsController < ApplicationController
+  skip_before_action :require_login, only: %i[index show]
   before_action :set_shop, only: %i[show edit update destroy]
 
   # /shops => shops_path
@@ -15,7 +16,7 @@ class ShopsController < ApplicationController
   def create
     @shop = Shop.new(shop_params)
     if @shop.save
-      redirect_to shop_path(params[:id])
+      redirect_to shop_path(@shop)
       flash[:success] = "success"
     else
       flash[:danger] = "fail"
@@ -25,6 +26,8 @@ class ShopsController < ApplicationController
 
   # /shops/:id => shop_path(:id)
   def show
+    @record = Record.new
+    @records = @shop.records.includes(:user).order(created_at: :desc)
   end
 
   # /shops/:id/edit => edit_shop_path
