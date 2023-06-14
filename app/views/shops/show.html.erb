@@ -27,6 +27,8 @@
       </article>
     </div>
   </div>
+  <div class="text-center m-4">
+    <%= link_to "作成する", new_shop_record_path(@shop) %>
+  </div>
   <%= render 'records/records', { records: @records} %>
-  <%= link_to "作成する", new_shop_record_path(@shop) %>
 </div>

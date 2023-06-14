@@ -1,30 +1,37 @@
-<tr id="record-<%= record.id %>">
-  <td style="width: 60px">
-  </td>
-  <td>
-    <h3 class="small"><%= record.user.name %></h3>
-    <div id="js-record-<%= record.id %>">
-      <%= simple_format(record.menu_name) %>
-    </div>
-    <div id="js-textarea-record-box-<%= record.id %>" style="display: none;">
-      <textarea id="js-textarea-record-<%= record.id %>" class="form-control mb-1"><%= record.soba_aldente %></textarea>
-      <button class="btn btn-light js-button-edit-record-cancel" data-record-id="<%= record.id %>">キャンセル</button>
-      <button class="btn btn-success js-button-record-update" data-record-id="<%= record.id %>">更新</button>
-    </div>
-  </td>
+<div class="record-top">
+  <%= record.user.name %>
+  <a href="#" class='js-edit-record-button' data-record-id="<%= record.id %>">編集</a>
+  <a href="#" class='js-delete-record-button' data-record-id="<%= record.id %>">削除</a>
+</div>
 
-  <td class="action">
-    <ul class="list-inline justify-content-center" style="float: right;">
-      <li class="list-inline-item">
-        <a href="#" class='js-edit-record-button' data-record-id="<%= record.id %>">
-          編集
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a href="#" class='js-delete-record-button' data-record-id="<%= record.id %>">
-          削除
-        </a>
-      </li>
-    </ul>
-  </td>
-</tr>
+<div class="card">
+  <div class="card-body">
+    <div class="record_title">
+      蕎麦<hr>
+    </div>
+    <div class="record_form">
+      <label for="soba_texture" class="form-label"><%= Record.human_attribute_name(:soba_texture) %></label>
+      <input type="range" class="form-range" id="soba_texture" disabled value="<%= record.soba_texture %>">
+    </div>
+    <div class="record_form">
+      <label for="soba_smell" class="form-label"><%= Record.human_attribute_name(:soba_smell) %></label>
+      <input type="range" class="form-range" id="soba_smell" disabled value="<%= record.soba_smell %>">
+    </div>
+    <div class="record_form">
+      <label for="soba_aldente" class="form-label"><%= Record.human_attribute_name(:soba_aldente) %></label>
+      <input type="range" class="form-range" id="soba_aldente" disabled value="<%= record.soba_aldente %>">
+    </div>
+
+    <div class="record_title">
+      つゆ<hr>
+    </div>
+    <div class="record_form">
+      <label for="soup_saltiness" class="form-label"><%= Record.human_attribute_name(:soup_saltiness) %></label>
+      <input type="range" class="form-range" id="soba_texture" disabled value="<%= record.soup_saltiness %>">
+    </div>
+    <div class="record_form">
+      <label for="soup_taste" class="form-label"><%= Record.human_attribute_name(:soup_taste) %></label>
+      <input type="range" class="form-range" id="soup_taste" disabled value="<%= record.soup_taste %>">
+    </div>
+  </div>
+</div>
