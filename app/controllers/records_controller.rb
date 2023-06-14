@@ -10,7 +10,8 @@ class RecordsController < ApplicationController
 
   # /shops/:shop_id/records/:id/ => shop_records_path(@shop, @record)
   def create
-    @record = Record.new(record_params)
+    @shop = Shop.find(params[:shop_id])
+    @record = current_user.records.build(record_params)
     if @record.save
       redirect_to shop_path(@shop)
       flash[:success] = "success"
@@ -49,7 +50,17 @@ class RecordsController < ApplicationController
   private
 
   def record_params
-    params.require(:record).permit(:visit_date, :kind_of_menu, :menu_name, :soba_texture, :soba_smell, :soba_aldente, :soup_saltiness, :soup_taste, :memo)
+    params.require(:record).permit(
+      :visit_date,
+      :kind_of_menu,
+      :menu_name,
+      :soba_texture,
+      :soba_smell,
+      :soba_aldente,
+      :soup_saltiness,
+      :soup_taste,
+      :memo
+      ).merge(shop_id: params[:shop_id])
   end
 
   def set_record

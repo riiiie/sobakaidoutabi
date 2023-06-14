@@ -1,6 +1,5 @@
 <tr id="record-<%= record.id %>">
   <td style="width: 60px">
-    <%= image_tag 'sample.jpg', class: 'rounded-circle', size: '50x50' %>
   </td>
   <td>
     <h3 class="small"><%= record.user.name %></h3>
@@ -8,7 +7,7 @@
       <%= simple_format(record.menu_name) %>
     </div>
     <div id="js-textarea-record-box-<%= record.id %>" style="display: none;">
-      <textarea id="js-textarea-record-<%= record.id %>" class="form-control mb-1"><%= record.body %></textarea>
+      <textarea id="js-textarea-record-<%= record.id %>" class="form-control mb-1"><%= record.soba_aldente %></textarea>
       <button class="btn btn-light js-button-edit-record-cancel" data-record-id="<%= record.id %>">キャンセル</button>
       <button class="btn btn-success js-button-record-update" data-record-id="<%= record.id %>">更新</button>
     </div>
