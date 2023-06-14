@@ -1,4 +1,5 @@
 <%= form_with(model: [shop, record], url: shop_records_path(params[:shop_id]), local: true) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
   <div class="pt-4">
     <h5>訪問日</h5>
     <hr>
