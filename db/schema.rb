@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_14_040427) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_14_051400) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "records", force: :cascade do |t|
-    t.datetime "visit_date", null: false
+    t.date "visit_date", null: false
     t.boolean "kind_of_menu", null: false
     t.string "menu_name", null: false
     t.integer "soba_texture", default: 50, null: false

@@ -11,7 +11,7 @@ class RecordsController < ApplicationController
   def create
     @record = Record.new(record_params)
     if @record.save
-      redirect_to shop_record_path(params[:id], @record)
+      redirect_to shop_path(@shop)
       flash[:success] = "success"
     else
       flash.now[:danger] = "fail"
