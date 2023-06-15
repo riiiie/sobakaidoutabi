@@ -1,34 +1,4 @@
 <h1>Shops#show</h1>
 <p>Find me in app/views/shops/show.html.erb</p>
 
-<div class="container pt-5">
-  <div class="row mb-3">
-    <div class="col-lg-8 offset-lg-2">
-      <h2><%= @shop.name %></h2>
-      <p>訪問者数：5人　お気に入り：3人</p>
-      <%= link_to edit_shop_path(@shop) do %><i class="fa-solid fa-pen"></i><% end %>
-      <%= link_to shop_path(@shop), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } do %><i class="fa-solid fa-trash"></i><% end %>      
-      <!-- 掲示板内容 -->
-      <article class="card">
-        <div class="card-body">
-          <div class='row'>
-            <div class='col-md-9'>
-              <div class="d-flex">
-                <figure class="image mx-4"><%= image_tag 'sample.jpeg', size: '200x130' %></figure>
-                  <p class="text">
-                    住所：<%= @shop.address %><br>
-                    定休日：<%= @shop.holiday %><br>
-                    蕎麦の取り扱い：二八蕎麦<br>
-                  </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-  <div class="text-center m-4">
-    <%= link_to "作成する", new_shop_record_path(@shop) %>
-  </div>
-  <%= render 'records/records', { records: @records} %>
-</div>
+
