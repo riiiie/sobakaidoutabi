@@ -6,6 +6,12 @@
     <div class="col-lg-8 offset-lg-2">
       <h2><%= @shop.name %></h2>
       <p>訪問者数：5人　お気に入り：3人</p>
-
+      <%= link_to edit_shop_path(@shop) do %><i class="fa-solid fa-pen"></i><% end %>
+      <%= link_to shop_path(@shop), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } do %><i class="fa-solid fa-trash"></i><% end %>      
+    </div>
+  </div>
+  <div class="text-center m-4">
+    <%= link_to "作成する", new_shop_record_path(@shop) %>
+  </div>
   <%= render 'records/records', { records: @records} %>
 </div>
