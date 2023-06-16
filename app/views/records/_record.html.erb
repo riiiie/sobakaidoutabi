@@ -1,6 +1,6 @@
 <div class="record-top">
   <%= record.user.name %>
-  <a href="#" class='js-edit-record-button' data-record-id="<%= record.id %>">編集</a>
+  <%= link_to "編集", edit_shop_record_path(shop, record) %>
   <a href="#" class='js-delete-record-button' data-record-id="<%= record.id %>">削除</a>
 </div>
 

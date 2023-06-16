@@ -32,7 +32,7 @@ class RecordsController < ApplicationController
   # /shops/:shop_id/records/:id/ => shop_record_path(@shop, @record)
   def update
     if @record.update(record_params)
-      redirect_to shop_record_path(params[id], params[:id])
+      redirect_to shop_record_path(params[:shop_id], params[:id])
       flash[:success] = "success"
     else
       flash[:danger] = "fail"
@@ -43,7 +43,7 @@ class RecordsController < ApplicationController
   # /shops/:shop_id/records/:id/ => shop_record_path(@shop, @record)
   def destory
     @record.destroy!
-    redirect_to shop_path(params[id]), status: :see_other 
+    redirect_to shop_path(@shop), status: :see_other 
     flash[:success] = "success"
   end
 
