@@ -1,0 +1,2 @@
+class SobaRaito < ApplicationRecord
+end
