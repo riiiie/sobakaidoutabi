@@ -1,6 +1,8 @@
 class Record < ApplicationRecord
   belongs_to :user
   belongs_to :shop
+  has_many :soba_raito_of_records, dependent: :destroy
+  has_many :soba_raitos, through: :soba_raito_of_records
 
   validates :visit_date, presence: true
   validates :soba_texture, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 100}
