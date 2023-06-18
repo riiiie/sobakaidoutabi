@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_18_102907) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_18_104808) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -51,6 +51,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_18_102907) do
     t.index ["soba_raito_id"], name: "index_soba_raito_of_records_on_soba_raito_id"
   end
 
+  create_table "soba_raito_of_shops", force: :cascade do |t|
+    t.bigint "shop_id", null: false
+    t.bigint "soba_raito_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shop_id", "soba_raito_id"], name: "index_soba_raito_of_shops_on_shop_id_and_soba_raito_id", unique: true
+    t.index ["shop_id"], name: "index_soba_raito_of_shops_on_shop_id"
+    t.index ["soba_raito_id"], name: "index_soba_raito_of_shops_on_soba_raito_id"
+  end
+
   create_table "soba_raitos", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
@@ -74,4 +84,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_18_102907) do
   add_foreign_key "records", "users"
   add_foreign_key "soba_raito_of_records", "records"
   add_foreign_key "soba_raito_of_records", "soba_raitos"
+  add_foreign_key "soba_raito_of_shops", "shops"
+  add_foreign_key "soba_raito_of_shops", "soba_raitos"
 end
