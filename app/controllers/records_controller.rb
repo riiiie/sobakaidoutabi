@@ -41,7 +41,7 @@ class RecordsController < ApplicationController
   end
 
   # /shops/:shop_id/records/:id/ => shop_record_path(@shop, @record)
-  def destory
+  def destroy
     @record.destroy!
     redirect_to shop_path(@shop), status: :see_other 
     flash[:success] = "success"

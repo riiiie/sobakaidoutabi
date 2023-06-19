@@ -1,7 +1,7 @@
 <div class="record-top mt-5">
   <%= record.user.name %>
   <%= link_to "編集", edit_shop_record_path(shop, record) %>
-  <a href="#" class='js-delete-record-button' data-record-id="<%= record.id %>">削除</a>
+  <%= link_to "削除", shop_record_path(shop, record), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
 </div>
 
 <div class="card">
