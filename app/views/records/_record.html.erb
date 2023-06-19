@@ -1,4 +1,4 @@
-<div class="record-top">
+<div class="record-top mt-5">
   <%= record.user.name %>
   <%= link_to "編集", edit_shop_record_path(shop, record) %>
   <a href="#" class='js-delete-record-button' data-record-id="<%= record.id %>">削除</a>
@@ -6,32 +6,68 @@
 
 <div class="card">
   <div class="card-body">
-    <div class="record_title">
-      蕎麦<hr>
-    </div>
-    <div class="record_form">
-      <label for="soba_texture" class="form-label"><%= Record.human_attribute_name(:soba_texture) %></label>
-      <input type="range" class="form-range" id="soba_texture" disabled value="<%= record.soba_texture %>">
-    </div>
-    <div class="record_form">
-      <label for="soba_smell" class="form-label"><%= Record.human_attribute_name(:soba_smell) %></label>
-      <input type="range" class="form-range" id="soba_smell" disabled value="<%= record.soba_smell %>">
-    </div>
-    <div class="record_form">
-      <label for="soba_aldente" class="form-label"><%= Record.human_attribute_name(:soba_aldente) %></label>
-      <input type="range" class="form-range" id="soba_aldente" disabled value="<%= record.soba_aldente %>">
-    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="record_title">
+          蕎麦<hr>
+        </div>
+        <div class="row record_form">
+          <div class="col-2" style="width: 13.6%;">
+            <label for="soba_texture" class="form-label"><%= Record.human_attribute_name(:soba_texture) %>：</label>
+          </div>
+          <div class="col-2 text-center">ざらざら</div>
+          <div class="col-6">
+            <input type="range" class="form-range" id="soba_texture" disabled value="<%= record.soba_texture %>">
+          </div>
+          <div class="col-2 text-center">つるつる</div>
+        </div>
+        <div class="row record_form">
+          <div class="col-2" style="width: 13.6%;">
+            <label for="soba_smell" class="form-label"><%= Record.human_attribute_name(:soba_smell) %>：</label>
+          </div>
+          <div class="col-2 text-center">控えめ</div>
+          <div class="col-6">
+            <input type="range" class="form-range" id="soba_smell" disabled value="<%= record.soba_smell %>">
+          </div>
+          <div class="col-2 text-center">豊か</div>
+        </div>
+        <div class="row record_form">
+          <div class="col-2" style="width: 13.6%;">
+            <label for="soba_aldente" class="form-label"><%= Record.human_attribute_name(:soba_aldente) %>：</label>
+          </div>
+          <div class="col-2 text-center">ふっつり</div>
+          <div class="col-6">
+            <input type="range" class="form-range" id="soba_aldente" disabled value="<%= record.soba_aldente %>">
+          </div>
+          <div class="col-2 text-center">しっかり</div>
+        </div>
+      </div>
 
-    <div class="record_title">
-      つゆ<hr>
-    </div>
-    <div class="record_form">
-      <label for="soup_saltiness" class="form-label"><%= Record.human_attribute_name(:soup_saltiness) %></label>
-      <input type="range" class="form-range" id="soba_texture" disabled value="<%= record.soup_saltiness %>">
-    </div>
-    <div class="record_form">
-      <label for="soup_taste" class="form-label"><%= Record.human_attribute_name(:soup_taste) %></label>
-      <input type="range" class="form-range" id="soup_taste" disabled value="<%= record.soup_taste %>">
+      <div class="col-md-6">
+        <div class="record_title">
+          つゆ<hr>
+        </div>
+        <div class="row record_form">
+          <div class="col-2" style="width: 13.6%;">
+            <label for="soup_saltiness" class="form-label"><%= Record.human_attribute_name(:soup_saltiness) %>：</label>
+          </div>
+          <div class="col-2 text-center">甘口</div>
+          <div class="col-6">
+            <input type="range" class="form-range" id="soba_texture" disabled value="<%= record.soup_saltiness %>">
+          </div>
+          <div class="col-2 text-center">辛口</div>
+        </div>
+        <div class="row record_form">
+          <div class="col-2" style="width: 13.6%;">
+            <label for="soup_taste" class="form-label"><%= Record.human_attribute_name(:soup_taste) %>：</label>
+          </div>
+          <div class="col-2 text-center">さっぱり</div>
+          <div class="col-6">
+            <input type="range" class="form-range" id="soup_taste" disabled value="<%= record.soup_taste %>">
+          </div>
+          <div class="col-2 text-center">濃口</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

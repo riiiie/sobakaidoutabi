@@ -1,2 +1,25 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+
+// shops/show.html.erb
+.shop_info th {
+  width: 68px;
+  text-align-last: justify;
+}
+
+// records/_record.html.erb
+// .form-range::-webkit-slider-thumb {
+//   background-color: #FFFFFF; /* ハンドルの色 */
+// }
+// .form-range::-moz-range-thumb {
+//   background-color: #FFFFFF; /* ハンドルの色 (Firefox) */
+// }
+// .form-range::-webkit-slider-runnable-track {
+//   background-color: #191970; /* バーの色 */
+//   height: 20px; /* バーの高さ (Firefox) */
+// }
+// .form-range::-moz-range-track {
+//   background-color: #191970; /* バーの色 (Firefox) */
+//   height: 20px; /* バーの高さ (Firefox) */
+// }
