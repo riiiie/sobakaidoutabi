@@ -3,7 +3,7 @@
 
 <div class="container pt-5">
   <div class="row mb-3">
-    <div class="col-lg-8 offset-lg-2">
+    <div class="col-lg-10 offset-lg-1">
       <h2><%= @shop.name %></h2>
       <p>訪問者数：5人　お気に入り：3人</p>
       <%= link_to edit_shop_path(@shop) do %><i class="fa-solid fa-pen"></i><% end %>
@@ -17,11 +17,29 @@
                 <figure class="image mx-4">
                   <div style="font-size: 5rem;"><i class="fa-solid fa-image"></i></div>
                 </figure>
-                  <p class="text">
-                    住所：<%= @shop.address %><br>
-                    定休日：<%= @shop.holiday %><br>
-                    蕎麦の取り扱い：二八蕎麦<br>
-                  </p>
+                <table class="shop_info">
+                  <tr>
+                    <th>住所</th>
+                    <td>：</td>
+                    <td><%= @shop.address %></td>
+                  </tr>
+                  <tr>
+                    <th>定休日</th>
+                    <td>：</td>
+                    <td><%= @shop.holiday %></td>
+                  </tr>
+                  <tr>
+                    <th>取り扱い</th>
+                    <td>：</td>
+                    <td>
+                      <% @shop.soba_raitos.each do |soba_raito| %>
+                        <div class="badge bg-primary text-white">
+                        <%= soba_raito.name %>
+                        </div>
+                      <% end %>
+                    </td>
+                  </tr>
+                </table>
               </div>
             </div>
           </div>
@@ -29,8 +47,8 @@
       </article>
     </div>
   </div>
-  <div class="text-center m-4">
+  <div class="text-center mt-5">
     <%= link_to "作成する", new_shop_record_path(@shop) %>
   </div>
-  <%= render 'records/records', { records: @records} %>
+  <%= render 'records/records', { records: @records,shop: @shop } %>
 </div>

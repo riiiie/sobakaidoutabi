@@ -55,7 +55,9 @@ class ShopsController < ApplicationController
   private 
 
   def shop_params
-    params.require(:shop).permit(:name, :address, :holiday, :closed)
+    params.require(:shop).permit(:name, :address, :holiday, :closed, soba_raito_ids: []).tap do |whitelisted|
+      whitelisted[:closed] = params[:shop][:closed].to_i
+    end
   end
 
   def set_shop
